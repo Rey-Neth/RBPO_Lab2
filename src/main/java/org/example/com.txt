@@ -1,9 +1,9 @@
 Invoke-RestMethod -Uri "http://localhost:8080/api/users" -Method POST -ContentType "application/json" -Body '{"username":"ivan","email":"ivan@mail.ru"}'
-PowerShell
+
 Invoke-RestMethod -Uri "http://localhost:8080/api/surveys" -Method POST -ContentType "application/json" -Body '{"title":"Customer Satisfaction","authorId":1,"status":"ACTIVE"}'
-PowerShell
+
 Invoke-RestMethod -Uri "http://localhost:8080/api/survey-questions" -Method POST -ContentType "application/json" -Body '{"surveyId":1,"text":"How satisfied are you?","required":true,"options":["Excellent","Good","Average","Bad"]}'
-PowerShell
+
 Invoke-RestMethod -Uri "http://localhost:8080/api/survey-participations" -Method POST -ContentType "application/json" -Body '{"surveyId":1,"respondentId":1,"status":"IN_PROGRESS"}'
-PowerShell
+
 Invoke-RestMethod -Uri "http://localhost:8080/api/survey-answers" -Method POST -ContentType "application/json" -Body '{"participationId":1,"questionId":1,"selectedValue":"Good"}'
